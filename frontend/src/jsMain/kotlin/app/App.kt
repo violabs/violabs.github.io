@@ -121,5 +121,11 @@ fun main() {
                 }
             }
         }
+
+        if (Date.now() % 144.0 == 0.0) {
+            div("h-96 w-full tile-bg opacity-50 text-2xl text-pink-900 font-bold text-center") {
+                div("bg-teal-900 opacity-80") { +"I am. Therefore I Think.".uppercase() }
+            }
+        }
     }
 }
