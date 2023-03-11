@@ -19,15 +19,15 @@ fun MutableList<String>.rotate(): MutableList<String> = apply { this.add(removeF
 fun main() {
     render {
         // card
-        div("max-w-full mx-auto sm:px-6 lg:px-8 py-12") {
+        div("max-w-full mx-auto flex flex-col items-center md:block sm:px-6 lg:px-8 py-12") {
             section("relative") {
-                div("absolute top-24 z-50 shadow-inner w-11/12 left-5") {
-                    h1("font-mono text-4xl font-bold shadow-2xl text-white") { +"Violabs Software" }
+                div("absolute top-24 z-50 shadow-inner w-11/12 left-3 md:left-5") {
+                    h1("font-mono text-3xl md:text-4xl font-bold shadow-2xl text-white") { +"Violabs Software" }
                 }
-                div("flex space-x-2 opacity-80 animate-pulse") {
+                div("flex space-x-2 opacity-80 animate-pulse ") {
                     div {
                         SHADOWS.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -35,7 +35,7 @@ fun main() {
 
                     div {
                         rotate1.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -43,7 +43,7 @@ fun main() {
 
                     div {
                         rotate2.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -51,7 +51,7 @@ fun main() {
 
                     div {
                         rotate3.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -59,7 +59,7 @@ fun main() {
 
                     div {
                         rotate4.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -67,7 +67,7 @@ fun main() {
 
                     div {
                         rotate5.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -75,7 +75,7 @@ fun main() {
 
                     div {
                         rotate6.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
 
@@ -83,16 +83,15 @@ fun main() {
 
                     div {
                         rotate7.forEach {
-                            div("$it w-12 h-12 mb-2 bg-teal-500") { }
+                            div("$it md:w-12 md:h-12 w-8 h-8 mb-2 bg-teal-500") { }
                         }
                     }
                 }
             }
 
-
             // this is suppose to be a joke
-            div("relative text-center") {
-                div("absolute -top-[310px] right-52") {
+            div("relative text-center sm:flex") {
+                div("md:absolute md:-top-[310px] md:right-52 sm:flex") {
                     val now = Date.now()
 
                     val words = when {
@@ -106,7 +105,7 @@ fun main() {
                         else -> "(RE)THINKING"
                     }
 
-                    section("flex flex-col justify-center p-t-5") {
+                    section("flex flex-col justify-center") {
                         div("text-3xl text-teal-300 tracking-wider") { +words }
                         div("text-2xl text-teal-400 tracking-wider") { +words }
                         div("text-xl text-teal-500 tracking-wider") { +words }
